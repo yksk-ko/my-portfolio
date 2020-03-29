@@ -12,12 +12,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - uses: borales/actions-yarn@v2.0.0
+      - name: yarn install
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
-      - uses: borales/actions-yarn@v2.0.0
+      - name: yarn lint
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: lint
-      - uses: borales/actions-yarn@v2.0.0
+      - name: yarn test
+        uses: borales/actions-yarn@v2.0.0
         with:
           cmd: test
